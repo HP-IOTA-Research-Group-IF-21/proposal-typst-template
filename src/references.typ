@@ -1,4 +1,4 @@
 #bibliography(
-  "../assets/bibs/examples.bib",
+  "../assets/bibs/references.bib",
   title: "daftar pustaka"
 )
