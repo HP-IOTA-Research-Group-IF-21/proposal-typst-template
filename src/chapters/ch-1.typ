@@ -2,7 +2,7 @@
 
 == Subbab
 
-#lorem(20)
+#lorem(100)
 
 #lorem(20)
 

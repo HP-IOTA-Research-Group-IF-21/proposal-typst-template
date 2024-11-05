@@ -8,10 +8,11 @@
 // Global settings
 #set page(
   paper: "a4",
-  margin: 3cm
+  margin: 3cm,
 )
 #set par(
-  leading: 1.5em
+  leading: 1.5em,
+  justify: false
 )
 
 // Body

@@ -9,15 +9,17 @@
 #let global-configs(contents) = [
   #set page(
     paper: "a4",
-    margin: (top: 3cm, right: 3cm, bottom: 3cm, left: 4cm)
+    margin: (top: 3cm, right: 3cm, bottom: 3cm, left: 4cm),
   )
   #set par(
     leading: 1.5em,
-    spacing: 1.75em
+    spacing: 1.75em,
+    justify: true
   )
   #set text(
     size: 12pt,
-    font: "Times New Roman"
+    font: "Times New Roman",
+    hyphenate: false
   )
   #set heading(numbering: utils.heading-numbering(heading-numbering-pattern))
   #set figure(numbering: utils.figure-numbering(1, figure-numbering-pattern))
