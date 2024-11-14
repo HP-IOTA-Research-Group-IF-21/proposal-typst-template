@@ -9,6 +9,8 @@
   #content-configs[
     #include "src/chapters/ch-1.typ"
     #include "src/chapters/ch-2.typ"
+    #include "src/chapters/ch-3.typ"
+    #include "src/chapters/ch-4.typ"
     #include "src/references.typ"
   ]
 ]

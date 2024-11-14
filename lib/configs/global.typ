@@ -3,6 +3,7 @@
 // Constants
 #let heading-numbering-pattern = "I.1.1.1.1.1"
 #let figure-numbering-pattern = "I.1.1.1.1.1."
+#let list-numbering-pattern = "1.a.i."
 
 
 // Global configs
@@ -29,6 +30,7 @@
     }
     it
   })
+  #set enum(numbering: list-numbering-pattern)
 
   #show heading: it => {
     if it.level == 1 {
