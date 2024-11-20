@@ -30,7 +30,11 @@
     }
     it
   })
-  #set enum(numbering: list-numbering-pattern)
+  #set enum(
+    numbering: list-numbering-pattern,
+    body-indent: 0.75em,
+    indent: 1.25em
+  )
 
   #show heading: it => {
     if it.level == 1 {
