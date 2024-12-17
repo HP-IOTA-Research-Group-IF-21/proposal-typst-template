@@ -5,7 +5,6 @@
 #let figure-numbering-pattern = "I.1.1.1.1.1."
 #let list-numbering-pattern = "1.a.i."
 
-
 // Global configs
 #let global-configs(contents) = [
   #set page(
@@ -23,12 +22,6 @@
     hyphenate: false
   )
   #set heading(numbering: utils.heading-numbering(heading-numbering-pattern))
-  #set ref(supplement: it => {
-    if it.func() == figure {
-      return none
-    }
-    it
-  })
   #set enum(
     numbering: list-numbering-pattern,
     body-indent: 0.75em,
@@ -54,17 +47,27 @@
   }
   #show figure: it => {
     if it.kind == table {
-      return block(breakable: false)[
-        #context it.counter.display(utils.table-numbering(1, figure-numbering-pattern))
+      return block(breakable: false, spacing: 2.5em)[
+        #set par(spacing: 1.5em)
+        #it.counter.display(utils.figure-numbering(1, figure-numbering-pattern, table))
         #it.caption.body
         #it.body
       ]
     }
-    block(breakable: false)[
+    block(breakable: false, spacing: 2.5em)[
+      #set par(spacing: 1.5em)
       #it.body
-      #context it.counter.display(utils.figure-numbering(1, figure-numbering-pattern))
+      #it.counter.display(utils.figure-numbering(1, figure-numbering-pattern, image))
       #it.caption.body
     ]
+  }
+  #show ref: it => {
+    let el = it.element
+    if el != none {
+          utils.ref-figure-numbering(el, 1, figure-numbering-pattern, el.kind)
+    } else {
+      it
+    }
   }
 
   #contents
