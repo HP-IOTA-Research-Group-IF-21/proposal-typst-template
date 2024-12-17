@@ -64,12 +64,7 @@
   #show ref: it => {
     let el = it.element
     if el != none {
-      if el.kind == table {
-          utils.ref-figure-numbering(el, 1, figure-numbering-pattern, table)
-      }
-      if el.kind == image {
-          utils.ref-figure-numbering(el, 1, figure-numbering-pattern, image)
-      }
+          utils.ref-figure-numbering(el, 1, figure-numbering-pattern, el.kind)
     } else {
       it
     }
