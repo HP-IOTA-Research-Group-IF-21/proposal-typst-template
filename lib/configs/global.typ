@@ -23,7 +23,6 @@
     hyphenate: false
   )
   #set heading(numbering: utils.heading-numbering(heading-numbering-pattern))
-  #set figure(numbering: utils.figure-numbering(1, figure-numbering-pattern))
   #set ref(supplement: it => {
     if it.func() == figure {
       return none
@@ -53,11 +52,20 @@
       #it
     ]
   }
-  #show figure: it => block(breakable: false)[
-    #it.body
-    #context it.counter.display(it.numbering)
-    #it.caption.body
-  ]
+  #show figure: it => {
+    if it.kind == table {
+      return block(breakable: false)[
+        #context it.counter.display(utils.table-numbering(1, figure-numbering-pattern))
+        #it.caption.body
+        #it.body
+      ]
+    }
+    block(breakable: false)[
+      #it.body
+      #context it.counter.display(utils.figure-numbering(1, figure-numbering-pattern))
+      #it.caption.body
+    ]
+  }
 
   #contents
 ]

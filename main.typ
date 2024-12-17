@@ -5,6 +5,7 @@
 #global-configs[
   #initial-configs[
     #include "src/cover.typ"
+    #include "src/outline.typ"
   ]
   #content-configs[
     #include "src/chapters/ch-1.typ"

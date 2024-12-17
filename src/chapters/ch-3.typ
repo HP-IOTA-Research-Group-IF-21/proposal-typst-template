@@ -1,3 +1,5 @@
+#import "../../lib/utils.typ" as utils
+
 = Analisis Masalah dan Rancangan solusi
 
 Tujuan utama penulisan bab ini adalah untuk menguraikan rencana penyelesaian masalah tugas akhir I.. Bab ini mencakup antara lain:
@@ -8,5 +10,33 @@ Tujuan utama penulisan bab ini adalah untuk menguraikan rencana penyelesaian mas
   + Alur umum algoritma atau langkah-langkah pengembangan sistem dan penjelasannya.
   + Penggunaan kakas yang diperlukan
 Dianjurkan untuk menggunakan diagram sebagai pendukung penjelasan bagian ini.
+
+
+#par(
+  leading: 1em,
+  spacing: 2em,
+  justify: true,
+  [
+    #figure(
+      table(
+        columns: (1fr,2fr),
+        align: (left, left),
+        fill: (_, y) => if calc.odd(y) { rgb("EAF2F5") },
+        stroke: utils.frame(rgb("21222C")),
+        [*column 1*], [*column 2*],
+        [row 1 column 1], [row 1 column 2],
+        [row 2 column 1], [row 2 column 2],
+      ),
+      caption: [Example table],
+    )<table-example>
+  ]
+)
+
+#figure(
+  image("../../assets/images/Iota_logo.png", width: 80%),
+  caption: [
+  ch1
+  ],
+)<ch-image>
 
 #pagebreak()
