@@ -1,9 +1,9 @@
 // Constants
-#let title = "<CONTOH JUDUL: PERANCANGAN ANTARMUKA SISTEM INFORMASI DI PUSKESMAS DAERAH PEDESAAN MENGGUNAKAN USER CENTERED DESIGN>"
-#let name = "<NAMA MAHASISWA>"
-#let nim = "<NIM MAHASISWA>"
-#let month = "<BULAN>"
-#let year = "<TAHUN>"
+#let title = [\<CONTOH JUDUL: PERANCANGAN ANTARMUKA SISTEM INFORMASI DI PUSKESMAS DAERAH PEDESAAN MENGGUNAKAN USER CENTERED DESIGN\>]
+#let name = [\<NAMA MAHASISWA\>]
+#let nim = [\<NIM MAHASISWA\>]
+#let month = [\<BULAN\>]
+#let year = [\<TAHUN\>]
 
 // Global settings
 #set page(
