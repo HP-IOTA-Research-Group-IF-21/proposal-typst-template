@@ -33,11 +33,12 @@
   #show figure.where(kind: image): set figure(supplement: "Gambar", numbering: utils.figure-numbering(1, figure-numbering-pattern, image), gap: 1em)
   #show figure.where(kind: table): set figure(supplement: "Tabel", numbering: utils.figure-numbering(1, figure-numbering-pattern, table,), gap: 1em)
   #show figure: set figure.caption(separator: " ")
-  
+
   #show outline.entry.where(level: 1): it => {
     if it.element.has("kind") {
       let childs = it.body.fields().children
-      return link(it.element.location())[#childs.at(0) #childs.at(2) #childs.at(4) #box(width: 1fr, repeat[.]) #it.page]
+      
+      return link(it.element.location())[#childs.at(0) #childs.at(2) #it.element.caption.body #box(width: 1fr, repeat[.]) #it.page]
     } else {
       return upper(strong(it))
     }
