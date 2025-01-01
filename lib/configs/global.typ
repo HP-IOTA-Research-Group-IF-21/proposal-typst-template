@@ -1,7 +1,6 @@
 #import "../utils.typ" as utils
 
 // Constants
-#let heading-numbering-pattern = "I.1.1.1.1.1"
 #let figure-numbering-pattern = "I.1.1.1.1.1."
 #let list-numbering-pattern = "1.a.i."
 
@@ -21,7 +20,6 @@
     font: "Times New Roman",
     hyphenate: false
   )
-  #set heading(numbering: utils.heading-numbering(heading-numbering-pattern))
   #set enum(
     numbering: list-numbering-pattern,
     body-indent: 0.75em,
@@ -32,41 +30,16 @@
     indent: 1.25em
   )
 
-  #show heading: it => {
-    if it.level == 1 {
-      return block(width:100%, spacing: 2em)[
-        #set align(center)
-        #set text(size: 14pt)
-        #upper(it)
-      ]
-    }
-    block(width:100%, above: 2.5em, below: 1.5em)[
-      #set text(size: 12pt)
-      #it
-    ]
-  }
-  #show figure: it => {
-    if it.kind == table {
-      return block(breakable: false, spacing: 2.5em)[
-        #set par(spacing: 1.5em)
-        #it.counter.display(utils.figure-numbering(1, figure-numbering-pattern, table))
-        #it.caption.body
-        #it.body
-      ]
-    }
-    block(breakable: false, spacing: 2.5em)[
-      #set par(spacing: 1.5em)
-      #it.body
-      #it.counter.display(utils.figure-numbering(1, figure-numbering-pattern, image))
-      #it.caption.body
-    ]
-  }
-  #show ref: it => {
-    let el = it.element
-    if el != none {
-          utils.ref-figure-numbering(el, 1, figure-numbering-pattern, el.kind)
+  #show figure.where(kind: image): set figure(supplement: "Gambar", numbering: utils.figure-numbering(1, figure-numbering-pattern, image), gap: 1em)
+  #show figure.where(kind: table): set figure(supplement: "Tabel", numbering: utils.figure-numbering(1, figure-numbering-pattern, table,), gap: 1em)
+  #show figure: set figure.caption(separator: " ")
+  
+  #show outline.entry.where(level: 1): it => {
+    if it.element.has("kind") {
+      let childs = it.body.fields().children
+      return link(it.element.location())[#childs.at(0) #childs.at(2) #childs.at(4) #box(width: 1fr, repeat[.]) #it.page]
     } else {
-      it
+      return upper(strong(it))
     }
   }
 
