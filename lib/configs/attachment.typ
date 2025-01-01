@@ -8,7 +8,7 @@
     numbering(schema, ..numbers)
   }
 
-  #set heading(numbering: heading-numbering("A.1.1.1.1.1"))
+  #set heading(numbering: heading-numbering("A.1.1.1.1.1"), supplement: [Lampiran])
   #counter(heading).update(0)
 
   #show heading: it => {
