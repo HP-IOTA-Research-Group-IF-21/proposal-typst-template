@@ -37,11 +37,18 @@
   #show outline.entry.where(level: 1): it => {
     if it.element.has("kind") {
       let childs = it.body.fields().children
-      
+
       return link(it.element.location())[#childs.at(0) #childs.at(2) #it.element.caption.body #box(width: 1fr, repeat[.]) #it.page]
-    } else {
-      return upper(strong(it))
+    }  
+    let pageType = it.body.fields().children.at(1).fields().text
+
+    if pageType == "Bab" {
+      return strong(upper(it))
     }
+    if pageType == "Lampiran" {
+      return strong(it)
+    }
+    return it
   }
 
   #contents
