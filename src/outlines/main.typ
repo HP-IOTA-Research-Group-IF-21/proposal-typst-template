@@ -1,7 +1,7 @@
 #outline(
   title: [Daftar Isi],
   indent: 1.25em,
-  target: <main> 
+  target: heading.where(supplement: [Bab])
 )
 
 #pagebreak()

@@ -5,6 +5,10 @@
 == Contoh Judul Anak Lampiran <atch>
 #lorem(100)
 
+@table-example-atch-1
+@ch-image-atch-1
+@ch-image-atch-2
+
 #par(
   leading: 1em,
   spacing: 2em,
@@ -24,5 +28,15 @@
     )<table-example-atch-1>
   ]
 )
+
+#figure(
+  image("../../assets/images/Iota_logo.png", width: 80%),
+  caption: [ch1],
+)<ch-image-atch-1>
+
+#figure(
+  image("../../assets/images/Iota_logo.png", width: 80%),
+  caption: [ch1],
+)<ch-image-atch-2>
 
 #pagebreak()

@@ -2,7 +2,7 @@
 
 #let attachment-configs(content) = [
   #let heading-numbering-pattern = "A.1.1.1.1.1"
-  #let figure-numbering-pattern = "A.1"
+  #let figure-numbering-pattern = "A.1."
 
   #let heading-numbering(schema) = (..numbers) => {
     if numbers.pos().len() == 1 {
@@ -13,7 +13,7 @@
     numbering(schema, ..numbers)
   }
 
-  #set heading(numbering: heading-numbering(heading-numbering-pattern))
+  #set heading(numbering: heading-numbering(heading-numbering-pattern), supplement: [Lampiran])
   #counter(heading).update(0)
 
   #show figure.where(kind: image): set figure(supplement: "Gambar", numbering: utils.figure-numbering(1, figure-numbering-pattern, image), gap: 1em)
