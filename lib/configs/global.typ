@@ -1,7 +1,6 @@
 #import "../utils.typ" as utils
 
 // Constants
-#let figure-numbering-pattern = "I.1.1.1.1.1."
 #let list-numbering-pattern = "1.a.i."
 
 // Global configs
@@ -30,8 +29,6 @@
     indent: 1.25em
   )
 
-  #show figure.where(kind: image): set figure(supplement: "Gambar", numbering: utils.figure-numbering(1, figure-numbering-pattern, image), gap: 1em)
-  #show figure.where(kind: table): set figure(supplement: "Tabel", numbering: utils.figure-numbering(1, figure-numbering-pattern, table,), gap: 1em)
   #show figure: set figure.caption(separator: " ")
 
   #show outline.entry.where(level: 1): it => {
