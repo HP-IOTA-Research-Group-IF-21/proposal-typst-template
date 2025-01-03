@@ -9,6 +9,7 @@
 #global-configs[
   #initial-configs[
     #include "src/cover.typ"
+    #include "src/approval.typ"
     #outline-configs[
       #include "src/outlines/main.typ"
       #include "src/outlines/attachment.typ"
