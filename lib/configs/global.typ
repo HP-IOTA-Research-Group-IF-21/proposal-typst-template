@@ -30,6 +30,7 @@
   )
 
   #show figure: set figure.caption(separator: " ")
+  #show figure.where(kind: table): set figure.caption(position: top)
 
   #show outline.entry.where(level: 1): it => {
     if it.element.has("kind") {
