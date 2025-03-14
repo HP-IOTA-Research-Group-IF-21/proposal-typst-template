@@ -1,4 +1,4 @@
 #let initial-configs(content) = [
-  #set page(numbering: none)
+  #set page(numbering: "i")
   #content
 ]

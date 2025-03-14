@@ -30,7 +30,7 @@ Tuliskan batasan-batasan yang diambil dalam pelaksanaan tugas akhir. Batasan ini
 Tuliskan semua tahapan yang akan dilalui selama pelaksanaan tugas akhir. Tahapan ini spesifik untuk menyelesaikan persoalan tugas akhir. Tahapan studi literatur tidak perlu dituliskan karena ini adalah pekerjaan yang harus Anda lakukan selama proses pelaksanaan tugas akhir.
 
 #figure(
-  image("../../assets/images/Iota_logo.png", width: 80%),
+  image("../../../assets/images/Iota_logo.png", width: 80%),
   caption: [ch1],
 )<ch-image>
 

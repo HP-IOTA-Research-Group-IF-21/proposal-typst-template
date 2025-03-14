@@ -1,4 +1,4 @@
-#import "../../lib/utils.typ" as utils
+#import "../../../lib/utils.typ" as utils
 
 = Contoh Judul Lampiran <atch>
 
@@ -30,12 +30,12 @@
 )
 
 #figure(
-  image("../../assets/images/Iota_logo.png", width: 80%),
+  image("../../../assets/images/Iota_logo.png", width: 80%),
   caption: [ch1],
 )<ch-image-atch-1>
 
 #figure(
-  image("../../assets/images/Iota_logo.png", width: 80%),
+  image("../../../assets/images/Iota_logo.png", width: 80%),
   caption: [ch1],
 )<ch-image-atch-2>
 

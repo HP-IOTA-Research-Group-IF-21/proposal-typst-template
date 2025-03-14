@@ -1,4 +1,4 @@
-#import "../../lib/utils.typ" as utils
+#import "../../../lib/utils.typ" as utils
 
 = Analisis Masalah dan Rancangan solusi <main>
 
@@ -57,11 +57,11 @@ Dianjurkan untuk menggunakan diagram sebagai pendukung penjelasan bagian ini.
 )
 
 #figure(
-  image("../../assets/images/Iota_logo.png", width: 80%),
+  image("../../../assets/images/Iota_logo.png", width: 80%),
   caption: [ch1],
 )<ch-image-3>
 #figure(
-  image("../../assets/images/Iota_logo.png", width: 80%),
+  image("../../../assets/images/Iota_logo.png", width: 80%),
   caption: [ch1],
 )<ch-image-4>
 

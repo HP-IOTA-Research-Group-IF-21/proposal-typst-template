@@ -13,7 +13,7 @@
     numbering(schema, ..numbers)
   }
 
-  #set heading(numbering: heading-numbering(heading-numbering-pattern), supplement: [Bab])
+  #set heading(numbering: heading-numbering(heading-numbering-pattern), supplement: [header])
 
   #show figure.where(kind: image): set figure(supplement: "Gambar", numbering: utils.figure-numbering(1, figure-numbering-pattern, image), gap: 1em)
   #show figure.where(kind: table): set figure(supplement: "Tabel", numbering: utils.figure-numbering(1, figure-numbering-pattern, table), gap: 1em)

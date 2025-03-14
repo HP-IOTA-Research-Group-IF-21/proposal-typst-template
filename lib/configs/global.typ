@@ -38,15 +38,21 @@
 
       return link(it.element.location())[#childs.at(0) #childs.at(2) #it.element.caption.body #box(width: 1fr, repeat[.]) #it.page]
     }  
-    let pageType = it.body.fields().children.at(1).fields().text
+    if "children" in it.body.fields() {
+      if "text" in it.body.fields().children.at(1).fields() {
+        let pageType = it.body.fields().children.at(1).fields().text
+        
+        if pageType == "Bab" {
+          return strong(upper(it))
+        }
 
-    if pageType == "Bab" {
-      return strong(upper(it))
+        if pageType == "Lampiran" {
+          return strong(it)
+        }
+      }
     }
-    if pageType == "Lampiran" {
-      return strong(it)
-    }
-    return it
+
+    return strong(it)
   }
 
   #contents

@@ -9,6 +9,7 @@
 #set page(
   paper: "a4",
   margin: 3cm,
+  numbering: none
 )
 #set par(
   leading: 1.5em,
@@ -16,15 +17,19 @@
 )
 
 // Body
-#grid(rows: (1fr,1fr,1fr,1fr,1fr), columns: (1fr), align: alignment.center, 
+#grid(rows: (1fr,1fr,1fr,1fr,1fr,1fr), columns: (1fr), align: alignment.center, 
   align(center)[
     #set par(leading: 2em)
     #text(size: 14pt, weight: "bold")[#upper(title)]
   ],
   align(center + horizon)[
+    #text(size: 14pt, weight: "bold")[
+      Laporan Tugas Akhir
+    ]
+  ],
+  align(center + horizon)[
     #text(weight: "bold")[
-      Disusun sebagai syarat kelulusan mata kuliah \
-      IF4091/Penulisan Proposal
+      Disusun sebagai syarat kelulusan tingkat sarjana
     ]
   ],
   align(center + horizon)[
@@ -37,7 +42,7 @@
     ]
   ],
   align(center + horizon)[
-    #image("../assets/images/itb-logo.png", height: 80%)
+    #image("../../assets/images/itb-logo.png", height: 80%)
   ],
   align(center + bottom)[
     #text(size: 14pt, weight: "bold")[

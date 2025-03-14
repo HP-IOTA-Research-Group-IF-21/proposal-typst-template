@@ -1,3 +1,4 @@
+#set heading(supplement: [header])
 #show heading: it => {
   set align(center)
   set text(size: 14pt)
@@ -6,8 +7,8 @@
 }
 
 #bibliography(
-  "../assets/bibs/references.bib",
-  title: "Daftar Pustaka"
+  "../../assets/bibs/references.bib",
+  title: upper([Daftar Referensi])
 )
 
 #pagebreak()
