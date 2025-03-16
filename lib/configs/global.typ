@@ -51,7 +51,7 @@
         }
       }
     }
-
+    
     return strong(it)
   }
 

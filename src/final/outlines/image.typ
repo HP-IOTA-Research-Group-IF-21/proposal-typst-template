@@ -1,4 +1,5 @@
-#heading(supplement: [header])[#upper([Daftar Gambar])]
+= #upper([Daftar Gambar])
+
 #outline(
   title: none,
   indent: 1.25em,

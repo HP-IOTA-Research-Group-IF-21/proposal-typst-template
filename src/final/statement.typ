@@ -4,7 +4,7 @@
 #let nim = [\<NIM\>]
 
 #align(center)[
-    #set text(size: 14pt, )
+    #set text(size: 14pt)
     #upper[*Lembar Pernyataan*]
 ]
 

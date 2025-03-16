@@ -1,4 +1,4 @@
-#heading(supplement: [header])[#upper([Daftar Tabel])]
+= #upper([Daftar Tabel])
 #outline(
   title: none,
   indent: 1.25em,
