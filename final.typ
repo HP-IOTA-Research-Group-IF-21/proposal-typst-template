@@ -16,6 +16,7 @@
       #include "src/final/outlines/main.typ"
       #include "src/final/outlines/attachment.typ"
       #include "src/final/outlines/image.typ"
+      #include "src/final/outlines/code.typ"
       #include "src/final/outlines/table.typ"
     ]
   ]
